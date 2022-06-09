@@ -11,6 +11,10 @@
   --header-border-color: #ececec;
   --portfolio-border-color: #eeeeee;
   --social-icon-color: #afb1b8;
+  --transition-color: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-background-color: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 body {
@@ -115,6 +119,7 @@ ol {
   letter-spacing: 0.02em;
   padding: 32px 0;
   color: var(--title-text-color);
+  transition: var(--transition);
 }
 
 .header-list .link:hover,
@@ -157,6 +162,7 @@ ol {
   letter-spacing: 0.02em;
   padding: 32px 0;
   color: var(--primary-text-color);
+  transition: var(--transition);
 }
 
 .contacts-link:hover,
@@ -205,6 +211,8 @@ ol {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   margin: 0 auto;
   display: block;
+  transition: var(--transition);
+  /* transition: var(--transition-background-color); */
 }
 
 .hero-button:hover,
@@ -333,6 +341,7 @@ ol {
   border-radius: 50%;
   background-color: var(--secondary-background-color);
   color: var(--social-icon-color);
+  transition: var(--transition);
 }
 
 .social-link:hover,
@@ -361,6 +370,8 @@ ol {
   border: 1px solid var(--social-icon-color);
   border-radius: 4px;
   color: var(--social-icon-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients-link:hover,
@@ -412,6 +423,7 @@ ol {
 .address-mail,
 .address-tel {
   color: rgba(255, 255, 255, 0.6);
+  transition: var(--transition);
 }
 
 .address-mail:hover,
@@ -457,6 +469,7 @@ ol {
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.1);
   color: var(--secondary-background-color);
+  transition: var(--transition);
 }
 
 .footer-link:hover,
@@ -490,6 +503,9 @@ ol {
   border-radius: 4px;
   color: var(--title-text-color);
   background-color: var(--secondary-accent-background-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .projects-button.current {
