@@ -135,11 +135,11 @@ ol {
   margin-right: 50px;
 }
 
-.header-link.current {
+.header-link {
   position: relative;
 }
 
-.header-link::after {
+.link.current::after {
   content: '';
 
   position: absolute;
@@ -150,14 +150,18 @@ ol {
   width: 100%;
   height: 4px;
   border-radius: 2px;
-  background-color: var(--accent-color);
-  /* transition: var(--transition-background-color); */
+  background-color: var(--title-text-color);
+  transition: var(--transition-background-color);
 }
 
-/* .header-link:hover::after,
+.header-link:hover::after,
 .header-link:focus::after {
   background-color: var(--accent-color);
-} */
+}
+
+.link.current::after {
+  background-color: var(--accent-color);
+}
 
 .contacts {
   display: flex;
